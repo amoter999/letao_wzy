@@ -1,3 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
 .body_bg{
     background-color: #222D32;
 }
@@ -8,3 +18,138 @@
 .mt-150{
     margin-top: 150px;
 }
+.lt_aside{
+    width: 180px;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #222D32;
+    transition: all 1s;
+}
+.lt_aside.disappear{
+    left:-180px;
+}
+.lt_aside .title p{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #367FA9;
+    font-size: 22px;
+    color: #fff;
+}
+.lt_aside .img{
+    text-align: center;
+}
+.lt_aside .img img{
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.lt_aside .img p{
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+}
+.lt_aside .nav{
+    width: 100%;
+    margin-top: 30px;
+}
+.lt_aside .nav li{
+    width: 100%;
+    
+    /* height: 40px; */
+    line-height: 40px;
+    border-left: 3px solid transparent;
+}
+.lt_aside .nav li.active{
+    border-left: 3px solid #069;
+    background-color: #1D1F21;
+}
+.lt_aside .nav li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-left:40px;
+    font-size: 14px;
+    color:#fff;
+}
+.lt_aside .nav li a i{
+    font-size: 14px;
+}
+.lt_aside .nav li .child{
+    display: none;
+    margin-left:-3px;
+}
+.lt_aside .nav li .child a{
+    display: block;
+    height: 40px;
+    padding-left: 60px;
+    line-height: 40px;
+    border: 3px solid transparent;
+    
+    
+}
+.lt_aside .nav li .child a.active{
+    border-left: 3px solid #069;
+    background-color: #1D1F21;
+
+}
+.lt_main{
+    width: 100%;
+    height: 1000px;
+}
+.lt_main .topBar{
+    width: 100%;
+    height: 50px;
+    padding-left: 180px;
+    background-color: #3C8DBC;
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    transition: all 1s;
+}
+.lt_main .topBar.change{
+    padding-left: 0;
+}
+.lt_main .topBar .menu,
+.lt_main .topBar .logout{
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+}
+.lt_main .topBar .menu{
+    margin-left: 15px;
+}
+.lt_main .topBar .logout{
+    margin-right: 15px;
+}
+.lt_main .content{
+    padding-left: 180px;
+    padding-top: 50px;
+    transition: all 1s;
+}
+.lt_main .content.change{
+    padding-left: 0;
+}
+.lt_main .content .breadcrumb{
+    margin-top: 20px;
+}
+.modal-body{
+    color:#A94442;
+}
+.chart{
+    width: 100%;
+    height: 400px;
+}
+.chart_left,
+.chart_right{
+    width: 48%;
+    height: 100%;
+    /* background-color: violet; */
+
+
+}
+
