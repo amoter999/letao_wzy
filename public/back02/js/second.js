@@ -76,6 +76,25 @@ $(function(){
         $("#form").data("bootstrapValidator").updateStatus("brandLogo","VALID");
       }
   })
+  // 表单提交成功后调用的函数
+  $("#form").on('success.form.bv', function (e) {
+
+    e.preventDefault();
+    //使用ajax提交逻辑
+    $.ajax({
+      url:"/category/addSecondCategory",
+      type:"post",
+      dataType:"json",
+      data:$("#form").serialize(),
+      success:function(info){
+        if(info.success){
+          $("#secondModal").modal("hide");
+          currentPage=1;
+          render();
+        }
+      }
+    });
+});
 
   $("#form").bootstrapValidator({
     //1. 指定不校验的类型，默认为[':disabled', ':hidden', ':not(:visible)'],可以不设置
@@ -95,7 +114,7 @@ $(function(){
         validators: {
           //不能为空
           notEmpty: {
-            message: '不能为空'
+            message: '请输入一级分类'
           },
         }
       },
@@ -103,7 +122,7 @@ $(function(){
         validators: {
           //不能为空
           notEmpty: {
-            message: '不能为空'
+            message: '请输入二级分类'
           },
         }
       },
@@ -111,7 +130,7 @@ $(function(){
         validators: {
           //不能为空
           notEmpty: {
-            message: '不能为空'
+            message: '请上传照片'
           },
         }
       },

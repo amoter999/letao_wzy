@@ -111,7 +111,7 @@
           <button type="button" class="close" data-dismiss="modal">
             <span>&times;</span>
           </button>
-          <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+          <h4 class="modal-title" id="myModalLabel">添加二级分类</h4>
         </div>
         <form id="form">
           <div class="modal-body">
@@ -129,6 +129,7 @@
             <div class="form-group">
               <input type="text" class="form-control" placeholder="请输入二级分类" name="brandName">
             </div>
+            <input type="hidden" name="hot">
             <div class="form-group">
               <label class="btn btn-default" for="fileupload" class="uploadFile">上传图片</label>
               <input type="file" id="fileupload" style="display:none" data-url="/category/addSecondCategoryPic" name="pic1">
@@ -140,7 +141,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal"> 取消 </button>
-            <button type="button" class="btn btn-primary ensure">确定</button>
+            <button type="submit" class="btn btn-primary ensure">确定</button>
           </div>
         </form>
       </div>
