@@ -62,7 +62,6 @@ router.post("/deleteAddress", function (req, res) {
         res.send({
             "success": true
         });
-
     })
 });
 
